@@ -32,12 +32,12 @@ const Bio = () => {
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
   return (
     <div className='bio'>
       <div>
         <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
-        <p>Written by Akane</p>
+        <p>Written by {author}</p>
       </div>
     </div>
   )
