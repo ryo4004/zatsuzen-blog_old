@@ -28,7 +28,9 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main className='contents'>{children}</main>
         <footer>
-          &copy; {new Date().getFullYear()} Akane
+          <small>
+            &copy; {new Date().getFullYear()} Akane
+          </small>
         </footer>
       </div>
     )
