@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
+import './reset.scss'
 import './layout.scss'
 
 class Layout extends React.Component {
