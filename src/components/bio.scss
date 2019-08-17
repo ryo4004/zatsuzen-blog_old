@@ -1,5 +1,16 @@
 .bio {
-  img {
-    border-radius: 50%;
+
+  & > div {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin: 0;
+      border-radius: 50%;
+    }
+
+    p {
+      margin: 0 0 0 16px;
+    }
   }
 }
