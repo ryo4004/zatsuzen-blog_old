@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
+import './layout.scss'
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
