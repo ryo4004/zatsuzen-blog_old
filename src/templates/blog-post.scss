@@ -1,3 +1,45 @@
+article.post-contents {
+
+  header {
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  section {
+    h1, h2, h3, h4, h5, h6 {
+      margin: 1rem 0;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    h1, h2 {
+      border-bottom: .55px solid #eaecef
+    }
+
+    p {
+      margin: 0 0 1rem 0;
+      word-wrap: break-word;
+    }
+
+    code {
+      color: #4a4a4a;
+      background-color: rgba(25,31,35,.05);
+    }
+  }
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
