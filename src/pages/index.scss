@@ -1,44 +1,51 @@
-.each-post {
-  a {
-    display: block;
-    padding: 8px;
-    color: #333;
-    text-decoration: none;
-
-    h3 {
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    p {
-      font-size: .8rem;
-    }
-
-    small {
-      color: #666;
-      font-size: .8rem;
-    }
-
-    ul {
-      display: inline-block;
-      margin: 0 0 0 2px;
-      
-      li {
-        display: inline-block;
-        margin: 0 2px;
-        padding: 2px 6px;
-        border: .55px solid #666;
-        border-radius: 6px;
-        font-size: .6rem;
-      }
-    }
-
-    &:hover {
-      background: #f0f0f0;
-
+.index {
+  .each-post {
+    a {
+      display: block;
+      padding: 8px 16px;
+      border-radius: 6px;
+      color: #333;
+      text-decoration: none;
+  
       h3 {
-        text-decoration: underline;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+  
+      p {
+        font-size: .8rem;
+      }
+  
+      small {
+        color: #666;
+        font-size: .8rem;
+      }
+  
+      ul {
+        display: inline-block;
+        margin: 0 0 0 2px;
+        
+        li {
+          display: inline-block;
+          margin: 0 2px;
+          padding: 2px 6px;
+          border: .55px solid #666;
+          border-radius: 6px;
+          font-size: .6rem;
+        }
+      }
+  
+      &:hover {
+        background: #f0f0f0;
+  
+        h3 {
+          text-decoration: underline;
+        }
       }
     }
+  }
+
+  .bio {
+    margin: 48px auto;
   }
 }
