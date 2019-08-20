@@ -6,25 +6,29 @@ import './layout.scss'
 
 class Layout extends React.Component {
   render() {
-    const { location, title, subtitle, children } = this.props
+    const { location, title, subtitle, post, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
     if (location.pathname === rootPath) {
       header = (
-        <header className='header-index'>
-          <div>
+        <header className='header'>
+          <div className='header-index'>
             <h1><Link to={`/`}>{title}</Link></h1>
             <h2>{subtitle}</h2>
           </div>
         </header>
       )
-    } else {
+    } else if (post) {
+      const tagList = post.tags ? <ul className='tags'>{post.tags.map((tag, i) => <li key={'tag' + i}>{tag}</li>)}</ul> : false
       header = (
-        <header className='header-blog-post'>
-          <div>
+        <header className='header'>
+          <div className='header-blog-post'>
             <h3><Link to={`/`}>{title}</Link></h3>
-            <h4>{subtitle}</h4>
+            {/* <h4>{subtitle}</h4> */}
+            <h1>{post.title}</h1>
+            <div className='post-date'>{post.date}</div>
+            {tagList}
           </div>
         </header>
       )
