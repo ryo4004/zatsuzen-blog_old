@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import 'tags.scss'
+import './tags.scss'
 
 class Tags extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class Tags extends React.Component {
       const count = posts.length
       return (
         <Layout location={this.props.location} title={siteTitle} subtitle={subTitle}>
-          <SEO title={post.frontmatter.title} description={post.excerpt} />
+          <SEO title={tagName} description={tagName} />
           <div className='tag'>
             <div className='tag-title'>
               <span><Link to={'/tags'}>タグ一覧</Link></span>
@@ -26,14 +26,15 @@ class Tags extends React.Component {
             <ul>
               {posts.map((each, i) => {
                 const tagList = each.frontmatter.tags ? each.frontmatter.tags.map((tag, j) => {
-                  const className = tag === tagName ? 'active' : false
+                  const className = tag === tagName ? 'active' : ''
                   return <li key={'tag' + j} className={className}>{tag}</li>
                 }) : false
                 return (
                   <li key={'post' + i} className='tag'>
                     <Link to={each.fields.slug}>
                       {each.frontmatter.title}
-                      {tagList}
+                      {each.frontmatter.date}
+                      {tagList ? <ul>{tagList}</ul> : false}
                     </Link>
                   </li>
                 )
