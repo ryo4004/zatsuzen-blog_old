@@ -16,20 +16,17 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle} subtitle={subTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.excerpt}
-        />
+      <Layout location={this.props.location} title={siteTitle} subtitle={subTitle} post={post.frontmatter}>
+        <SEO title={post.frontmatter.title} description={post.excerpt} />
         <article className='post-contents'>
-          <header>
+          {/* <header>
             <h1>
               {post.frontmatter.title}
             </h1>
             <p>
               {post.frontmatter.date}
             </p>
-          </header>
+          </header> */}
           <section className='markdown-body' dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
           <footer>
