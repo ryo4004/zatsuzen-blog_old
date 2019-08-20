@@ -21,7 +21,7 @@ JavaScriptのフレームワークといえば、jQueryが主流の時代があ�
 
 しかし、問題点や課題が多く、いまどきをうたうプロジェクトなどはReactなど新しいフレームワークの採用事例も増えています。
 
-例えば、<a href='https://qiita.com' target='_blank'>Qiita</a>や
+例えば、<a href='https://qiita.com' target='_blank'>Qiita</a>など。
 
 置き換えられるのだから似てるのかな、と思いきやかなり別物です。
 特にふんわり触っているうちは全く別のものに見えると思います。
