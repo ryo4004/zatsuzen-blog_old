@@ -25,6 +25,7 @@ module.exports = {
       },
     },
     {
+      
       resolve: `gatsby-transformer-remark`,
       options: {
         commonmark: true,
@@ -34,6 +35,8 @@ module.exports = {
         breaks: true,
         blocks: true,
         plugins: [
+          // IMPORTANT: this must be ahead of other plugins that use code blocks
+          'gatsby-remark-code-titles',
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -58,7 +61,6 @@ module.exports = {
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          'gatsby-remark-code-titles'
         ],
       },
     },
