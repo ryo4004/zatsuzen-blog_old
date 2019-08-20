@@ -6,7 +6,7 @@ import './layout.scss'
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, subtitle, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -15,6 +15,7 @@ class Layout extends React.Component {
         <header className='header-index'>
           <div>
             <h1><Link to={`/`}>{title}</Link></h1>
+            <h2>{subtitle}</h2>
           </div>
         </header>
       )
@@ -23,6 +24,7 @@ class Layout extends React.Component {
         <header className='header-blog-post'>
           <div>
             <h3><Link to={`/`}>{title}</Link></h3>
+            <h4>{subtitle}</h4>
           </div>
         </header>
       )

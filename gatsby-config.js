@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `ゆったりWeb手帳`,
+    subtitle: '気になったことをのんびり書くよ',
     author: `あかね`,
     description: `Webで気になったことをゆったり書いていくサイトです`,
     siteUrl: `https://blog.zatsuzen.com`,
