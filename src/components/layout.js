@@ -14,7 +14,6 @@ class Layout extends React.Component {
       header = (
         <header className='header-index'>
           <div>
-            <div className='logo'></div>
             <h1><Link to={`/`}>{title}</Link></h1>
           </div>
         </header>
@@ -23,7 +22,6 @@ class Layout extends React.Component {
       header = (
         <header className='header-blog-post'>
           <div>
-            <div className='logo'></div>
             <h3><Link to={`/`}>{title}</Link></h3>
           </div>
         </header>
