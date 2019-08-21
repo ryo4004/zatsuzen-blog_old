@@ -20,12 +20,11 @@ class Layout extends React.Component {
         </header>
       )
     } else if (post) {
-      const tagList = post.tags ? <ul className='tags'>{post.tags.map((tag, i) => <li key={'tag' + i}>{tag}</li>)}</ul> : false
+      const tagList = post.tags ? <ul className='tags'>{post.tags.map((tag, i) => <li key={'tag' + i}><Link to={'/tags/' + tag}>{tag}</Link></li>)}</ul> : false
       header = (
         <header className='header'>
           <div className='header-blog-post'>
             <h3><Link to={`/`}>{title}</Link></h3>
-            {/* <h4>{subtitle}</h4> */}
             <h1>{post.title}</h1>
             <div className='post-date'>{post.date}</div>
             {tagList}
