@@ -31,7 +31,7 @@ html {
       }
     }
 
-    .header-index {
+    .header-index, .header-tags {
       padding: 48px 0;
 
       h1 {
@@ -74,13 +74,19 @@ html {
 
         li {
           display: inline-block;
-          padding: 2px 8px;
-          border: .55px solid #333;
-          border-radius: 2px;
-          font-size: .8rem;
 
-          &:not(:first-child) {
-            margin: 0 6px;
+          a {
+            display: inline-block;
+            margin: 0 6px 0 0;
+            padding: 2px 8px;
+            border: .55px solid #333;
+            border-radius: 6px;
+            font-size: .75rem;
+            text-decoration: none;
+
+            &:hover {
+              background: #ccc;
+            }
           }
         }
       }
@@ -95,12 +101,12 @@ html {
 
   footer {
     width: 100%;
-    margin: 16px 0 0;
+    margin: 16px 16px 0;
     padding: 48px 0 48px;
 
     small {
       display: block;
-      width: 90%;
+      width: 100%;
       max-width: 800px;
       margin: 0 auto;
       font-size: .8rem;

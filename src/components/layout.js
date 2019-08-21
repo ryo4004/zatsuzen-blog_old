@@ -11,6 +11,7 @@ class Layout extends React.Component {
     let header
 
     if (location.pathname === rootPath) {
+      // index page
       header = (
         <header className='header'>
           <div className='header-index'>
@@ -20,6 +21,7 @@ class Layout extends React.Component {
         </header>
       )
     } else if (post) {
+      // post page
       const tagList = post.tags ? <ul className='tags'>{post.tags.map((tag, i) => <li key={'tag' + i}><Link to={'/tags/' + tag}>{tag}</Link></li>)}</ul> : false
       header = (
         <header className='header'>
@@ -28,6 +30,16 @@ class Layout extends React.Component {
             <h1>{post.title}</h1>
             <div className='post-date'>{post.date}</div>
             {tagList}
+          </div>
+        </header>
+      )
+    } else {
+      // tag page
+      header = (
+        <header className='header'>
+          <div className='header-tags'>
+            <h1><Link to={`/`}>{title}</Link></h1>
+            <h2>{subtitle}</h2>
           </div>
         </header>
       )
