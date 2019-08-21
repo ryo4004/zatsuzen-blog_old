@@ -30,7 +30,7 @@ class BlogIndex extends React.Component {
                       <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
                     </section>
                     <small>{node.frontmatter.date}</small>
-                    {node.frontmatter.tags ? <ul>{node.frontmatter.tags.map((tag, i) => <li key={'tag' + i}>{tag}</li>)}</ul> : false}
+                    {node.frontmatter.tags ? <ul>{node.frontmatter.tags.map((tag, i) => <li key={'tag' + i}><Link to={'/tags/' + tag}>{tag}</Link></li>)}</ul> : false}
                   </Link>
                 </article>
               )

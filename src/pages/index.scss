@@ -12,6 +12,14 @@
       border-radius: 6px;
       color: #333;
       text-decoration: none;
+ 
+      &:hover {
+        background: #f0f0f0;
+  
+        h3 {
+          text-decoration: underline;
+        }
+      }
   
       h3 {
         font-size: 1.1rem;
@@ -33,19 +41,21 @@
         
         li {
           display: inline-block;
-          margin: 0 2px;
-          padding: 2px 6px;
-          border: .55px solid #666;
-          border-radius: 6px;
-          font-size: .6rem;
-        }
-      }
-  
-      &:hover {
-        background: #f0f0f0;
-  
-        h3 {
-          text-decoration: underline;
+
+          a {
+            display: inline-block;
+            margin: 0 2px;
+            padding: 2px 6px;
+            border: .55px solid #666;
+            border-radius: 6px;
+            font-size: .75rem;
+            color: #333;
+            text-decoration: none;
+
+            &:hover {
+              background: #ccc;
+            }
+          }
         }
       }
     }
