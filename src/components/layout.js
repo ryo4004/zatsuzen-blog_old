@@ -39,7 +39,7 @@ class Layout extends React.Component {
         <main className='contents'>{children}</main>
         <footer>
           <small>
-            &copy; {new Date().getFullYear()} Akane
+            &copy; <a href='https://zatsuzen.com'>{new Date().getFullYear()} Akane</a>
           </small>
         </footer>
       </div>
