@@ -16,6 +16,7 @@ class TagsList extends React.Component {
       <Layout location={this.props.location} title={siteTitle} subtitle={subTitle}>
         <SEO title={'タグ一覧'} description={'タグ一覧ページ'} />
         <div className='tags-list'>
+          <h2>タグ一覧</h2>
           <ul>
             {tags.map((tag, i) => {
               return (

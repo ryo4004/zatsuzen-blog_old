@@ -1,0 +1,31 @@
+.tags-list {
+
+  h2 {
+    font-size: .8rem;
+    margin: 16px;
+  }
+
+  ul {
+    margin: 16px;
+
+    li {
+      display: inline-block;
+      margin-right: 6px;
+      margin-bottom: 6px;
+
+      a {
+        display: block;
+        padding: 2px 8px;
+        border: .55px solid #333;
+        border-radius: 6px;
+        font-size: .75rem;
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+          background: #eee;
+        }
+      }
+    }
+  }
+}
