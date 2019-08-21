@@ -19,21 +19,21 @@ class Tags extends React.Component {
           <SEO title={tagName} description={tagName} />
           <div className='tag'>
             <div className='tag-title'>
-              <span><Link to={'/tags'}>タグ一覧</Link></span>
-              <span><Link to={'/tags'}>{tagName}</Link></span>
-              <span><Link to={'/tags'}>{count}</Link></span>
+              <span className='tag-name'><Link to={'/tags/' + tagName}>{tagName}</Link></span>
+              <span className='count'>{count}件</span>
+              <span className='link'><Link to={'/tags'}>タグ一覧</Link></span>
             </div>
             <ul>
               {posts.map((each, i) => {
                 const tagList = each.frontmatter.tags ? each.frontmatter.tags.map((tag, j) => {
                   const className = tag === tagName ? 'active' : ''
-                  return <li key={'tag' + j} className={className}>{tag}</li>
+                  return <li key={'tag' + j} className={className}><Link to={'/tags/' + tag}>{tag}</Link></li>
                 }) : false
                 return (
                   <li key={'post' + i} className='tag'>
                     <Link to={each.fields.slug}>
-                      {each.frontmatter.title}
-                      {each.frontmatter.date}
+                      <h3>{each.frontmatter.title}</h3>
+                      <small>{each.frontmatter.date}</small>
                       {tagList ? <ul>{tagList}</ul> : false}
                     </Link>
                   </li>
