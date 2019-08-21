@@ -20,7 +20,6 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <article className='post-contents'>
           <section className='markdown-body' dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
           <footer>
             <Bio />
           </footer>
@@ -28,17 +27,19 @@ class BlogPostTemplate extends React.Component {
 
         <nav className='navigation'>
           <ul>
-            <li>
+            <li className='prev'>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
+                  <span>前の記事</span>
+                  <span>{previous.frontmatter.title}</span>
                 </Link>
               )}
             </li>
-            <li>
+            <li className='next'>
               {next && (
                 <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
+                  <span>次の記事</span>
+                  <span>{next.frontmatter.title}</span>
                 </Link>
               )}
             </li>

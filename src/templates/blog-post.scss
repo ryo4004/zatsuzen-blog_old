@@ -3,9 +3,44 @@ article.post-contents {
 }
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+  // margin: 0 16px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;  
+
+    li {
+      max-width: 50%;
+      margin: 0 16px;
+
+      a {
+        color: #333;
+        text-decoration: none;
+
+        span {
+          display: block;
+
+          &:first-child {
+            color: #666;
+            font-size: .75rem;
+          }
+  
+          &:last-child {
+            display: block;
+          }
+        }
+
+        &:hover span:last-child {
+          text-decoration: underline;
+        }
+      }
+
+      &.next a span:first-child {
+        text-align: right;
+      }
+    }  
+  }
 }
 
 // style={{
