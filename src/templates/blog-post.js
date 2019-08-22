@@ -21,9 +21,6 @@ class BlogPostTemplate extends React.Component {
 
         <article className='post-contents'>
           <section className='markdown-body' dangerouslySetInnerHTML={{ __html: post.html }} />
-          <footer>
-            <Bio />
-          </footer>
         </article>
 
         <nav className='navigation'>
@@ -46,6 +43,9 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </nav>
+
+        <Bio />
+
       </Layout>
     )
   }
