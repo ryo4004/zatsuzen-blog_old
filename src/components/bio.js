@@ -37,7 +37,7 @@ const Bio = () => {
     <div className='bio'>
       <div>
         <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
-        <p>Written by <a href='https://zatsuzen.com'>{author}</a></p>
+        <p><a href='https://zatsuzen.com'>{author}</a></p>
       </div>
     </div>
   )
