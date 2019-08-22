@@ -1,9 +1,10 @@
 .bio {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
 
   & > div {
+    margin: 16px;
     display: flex;
     align-items: center;
 
