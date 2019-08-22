@@ -101,22 +101,37 @@ html {
 
   footer {
     width: 100%;
-    margin: 16px 16px 0;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 48px 0 48px;
 
-    small {
-      display: block;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: .8rem;
+    & > div {
+      margin: 16px;
 
-      a {
-        color: #333;
-        text-decoration: none;
+      .home {
 
-        &:hover {
-          text-decoration: underline;
+        a {
+          font-size: 1rem;
+          color: #333;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+  
+      small {
+        display: block;
+        font-size: .8rem;
+  
+        a {
+          color: #333;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

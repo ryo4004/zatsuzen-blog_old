@@ -49,9 +49,12 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main className='contents'>{children}</main>
         <footer>
-          <small>
-            &copy; <a href='https://zatsuzen.com'>{new Date().getFullYear()} Akane</a>
-          </small>
+          <div>
+            <div className='home'><Link to='/'>{title}</Link></div>
+            <small>
+              &copy; <a href='https://zatsuzen.com'>{new Date().getFullYear()} Akane</a>
+            </small>
+          </div>
         </footer>
       </div>
     )
