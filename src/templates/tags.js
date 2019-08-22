@@ -18,16 +18,17 @@ class Tags extends React.Component {
         <Layout location={this.props.location} title={siteTitle} subtitle={subTitle}>
           <SEO title={tagName} description={tagName} />
           <div className='tag'>
+            <h2>記事一覧(タグ)</h2>
             <div className='tag-title'>
               <span className='tag-name'><Link to={'/tags/' + tagName}>{tagName}</Link></span>
               <span className='count'>{count}件</span>
-              <span className='link'><Link to={'/tags'}>タグ一覧</Link></span>
+              <span className='link'><Link to={'/tags'}>すべてのタグ</Link></span>
             </div>
             <ul>
               {posts.map((each, i) => {
                 const tagList = each.frontmatter.tags ? each.frontmatter.tags.map((tag, j) => {
                   const className = tag === tagName ? 'active' : ''
-                  return <li key={'tag' + j} className={className}><Link to={'/tags/' + tag}>{tag}</Link></li>
+                  return <li key={'tag' + j} className={className}><object><Link to={'/tags/' + tag}>{tag}</Link></object></li>
                 }) : false
                 return (
                   <li key={'post' + i} className='tag'>

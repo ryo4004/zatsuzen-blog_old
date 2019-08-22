@@ -1,4 +1,10 @@
 .tag {
+
+  h2 {
+    font-size: .8rem;
+    margin: 16px;
+  }
+
   .tag-title {
     margin: 16px;
 
@@ -10,12 +16,12 @@
         border: .55px solid #666;
         border-radius: 6px;
         font-size: .75rem;
+        font-weight: bold;
         color: #333;
         text-decoration: none;
-        background: #ccc;
 
         &:hover {
-          background: #fff;
+          background: #ccc;
         }
       }
     }
@@ -29,11 +35,10 @@
       background: #eee;
     }
 
-    
+
     .link {
       a {
         display: inline-block;
-        padding: 2px 8px;
         font-size: .8rem;
         color: #333;
         text-decoration: none;
@@ -96,11 +101,7 @@
 
             &.active {
               a {
-                background: #ccc;
-
-                &:hover {
-                  background: #fff;
-                }
+                font-weight: bold;
               }
             }
           }
