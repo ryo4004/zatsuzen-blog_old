@@ -22,6 +22,7 @@ class BlogIndex extends React.Component {
           {
             posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
+              const tagList = node.frontmatter.tags ? node.frontmatter.tags.map((tag, i) => <li key={'tag' + i}><object><Link to={'/tags/' + tag}>{tag}</Link></object></li>) : false
               return (
                 <article key={node.fields.slug} className='each-post'>
                   <Link to={node.fields.slug}>
@@ -30,7 +31,7 @@ class BlogIndex extends React.Component {
                       <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
                     </section>
                     <small>{node.frontmatter.date}</small>
-                    {node.frontmatter.tags ? <ul>{node.frontmatter.tags.map((tag, i) => <li key={'tag' + i}><Link to={'/tags/' + tag}>{tag}</Link></li>)}</ul> : false}
+                    {tagList ? <ul>{tagList}</ul> : false}
                   </Link>
                 </article>
               )
