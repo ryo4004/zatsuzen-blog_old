@@ -1,5 +1,5 @@
 ---
-title: CouchDBをUbuntuにインストールして試してみる
+title: CouchDBをUbuntuにインストールしてみる
 date: "2019-08-27T18:00:00.000Z"
 tags: ['couchdb', 'database']
 ---
