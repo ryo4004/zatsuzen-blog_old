@@ -16,12 +16,13 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle} subtitle={subTitle}>
-        <SEO title="Home" />
+        <SEO />
         <div className='index'>
           <h2>記事一覧</h2>
           {
             posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
+              const date = node.frontmatter.update ? node.frontmatter.update : node.frontmatter.date
               const tagList = node.frontmatter.tags ? node.frontmatter.tags.map((tag, i) => <li key={'tag' + i}><object><Link to={'/tags/' + tag}>{tag}</Link></object></li>) : false
               return (
                 <article key={node.fields.slug} className='each-post'>
@@ -30,8 +31,8 @@ class BlogIndex extends React.Component {
                     <section>
                       <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
                     </section>
-                    <small>{node.frontmatter.date}</small>
                     <small>{date}</small>
+                    {tagList ? <ul>{tagList}</ul> : false}
                   </Link>
                 </article>
               )
@@ -63,6 +64,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "YYYY/MM/DD")
+            update(formatString: "YYYY/MM/DD")
             title
             tags
           }
