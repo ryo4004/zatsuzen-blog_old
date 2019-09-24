@@ -86,3 +86,13 @@ strong {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   outline: none;
 }
+
+::selection {
+	background: rgba(80,167,194,.6);
+  color: #333;
+}
+
+::-moz-selection {
+	background: rgba(80,167,194,.6);
+  color: #333;
+}
