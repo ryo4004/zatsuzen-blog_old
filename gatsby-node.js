@@ -59,6 +59,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 title
                 tags
                 date(formatString: "YYYY/MM/DD")
+                update(formatString: "YYYY/MM/DD")
               }
             }
           }

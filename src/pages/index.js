@@ -31,7 +31,7 @@ class BlogIndex extends React.Component {
                       <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
                     </section>
                     <small>{node.frontmatter.date}</small>
-                    {tagList ? <ul>{tagList}</ul> : false}
+                    <small>{date}</small>
                   </Link>
                 </article>
               )

@@ -26,6 +26,7 @@ class Tags extends React.Component {
             </div>
             <ul>
               {posts.map((each, i) => {
+                const date = each.frontmatter.update ? each.frontmatter.update : each.frontmatter.date
                 const tagList = each.frontmatter.tags ? each.frontmatter.tags.map((tag, j) => {
                   const className = tag === tagName ? 'active' : ''
                   return <li key={'tag' + j} className={className}><object><Link to={'/tags/' + tag}>{tag}</Link></object></li>
@@ -34,7 +35,7 @@ class Tags extends React.Component {
                   <li key={'post' + i} className='tag'>
                     <Link to={each.fields.slug}>
                       <h3>{each.frontmatter.title}</h3>
-                      <small>{each.frontmatter.date}</small>
+                      <small>{date}</small>
                       {tagList ? <ul>{tagList}</ul> : false}
                     </Link>
                   </li>
