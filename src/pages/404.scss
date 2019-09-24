@@ -1,0 +1,32 @@
+.not-found {
+  
+  h1 {
+    margin: 16px;
+    font-size: 1.4rem;
+  }
+
+  .status-code {
+    margin: 0 auto;
+    color: #ccc;
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  .status-message {
+    text-align: center;
+  }
+
+  p {
+    display: inline-block;
+    margin: 32px 16px 0;
+
+    a {
+      color: #333;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
