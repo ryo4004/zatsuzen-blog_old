@@ -8,6 +8,7 @@ module.exports = {
     social: {
       twitter: `akanewz`,
     },
+    image: '/images/card.png',
   },
   plugins: [
     {
