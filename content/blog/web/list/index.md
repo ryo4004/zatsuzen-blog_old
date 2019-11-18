@@ -12,9 +12,17 @@ HTMLで番号付きのリストを使いたい場合は`<ol>`タグを使いま�
 
 こういうやつですね。
 
-1. aaa
-2. bbb
-3. ccc
+<ol class='sample'>
+  <li>aaa</li>
+  <li>bbb</li>
+  <li>ccc</li>
+</ol>
+
+<style>
+ol.sample {
+  list-style: decimal inside;
+}
+</style>
 
 ```html:title=<span>HTML</span>
 <ol>
@@ -32,20 +40,20 @@ HTMLで番号付きのリストを使いたい場合は`<ol>`タグを使いま�
 
 以下のような採番をしたいときのサンプルです。
 
-<ol class='sample'>
+<ol class='sample2'>
   <li>aaa</li>
   <li>bbb</li>
   <li>ccc</li>
 </ol>
 
 <style>
-ol.sample {
+ol.sample2 {
   list-style: none;
 }
-ol.sample li {
+ol.sample2 li {
   counter-increment: li;
 }
-ol.sample li::before {
+ol.sample2 li::before {
   content: 'a-' counter(li) '. ';
 }
 </style>
