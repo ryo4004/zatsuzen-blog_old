@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
               const tagList = node.frontmatter.tags ? node.frontmatter.tags.map((tag, i) => <li key={'tag' + i}><object><Link to={'/tags/' + tag}>{tag}</Link></object></li>) : false
               return (
                 <article key={node.fields.slug} className='each-post'>
-                  <Link to={node.fields.slug}>
+                  <Link to={node.fields.slug} onTouchStart={() => {}}>
                     <h3>{title}</h3>
                     <section>
                       <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
