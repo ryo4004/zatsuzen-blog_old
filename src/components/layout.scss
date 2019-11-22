@@ -10,7 +10,7 @@ html {
     // 165 Morning Salad
     // background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
     background-image: linear-gradient(160deg, #B7F8DB 0%, #50A7C2 100%);
-    
+
     & > div {
       width: 100%;
       max-width: 800px;
@@ -32,7 +32,6 @@ html {
     }
 
     .header-index, .header-tags {
-      padding: 48px 0;
 
       h1 {
         font-size: 1.2rem;
@@ -42,6 +41,14 @@ html {
         font-size: .7rem;
         color: #666;
       }
+    }
+
+    .header-index {
+      padding: 96px 0;
+    }
+
+    .header-tags {
+      padding: 48px 0;
     }
 
     .header-blog-post {
@@ -114,21 +121,21 @@ html {
           font-size: 1rem;
           color: #333;
           text-decoration: none;
-  
+
           &:hover {
             text-decoration: underline;
           }
         }
       }
-  
+
       small {
         display: block;
         font-size: .8rem;
-  
+
         a {
           color: #333;
           text-decoration: none;
-  
+
           &:hover {
             text-decoration: underline;
           }
