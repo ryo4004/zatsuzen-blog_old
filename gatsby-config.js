@@ -26,7 +26,6 @@ module.exports = {
       },
     },
     {
-      
       resolve: `gatsby-transformer-remark`,
       options: {
         commonmark: true,
