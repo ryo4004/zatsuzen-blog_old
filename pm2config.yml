@@ -1,0 +1,2 @@
+name: zatsuzen-blog
+script: gatsby serve -p 9001
