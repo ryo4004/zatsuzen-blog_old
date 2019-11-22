@@ -58,7 +58,9 @@ Google Cloud Platform のコンソールを開き、Compute EngineのVMインス
 
 編集を開き、SSHキーの 項目を追加 から puttygen.exe で Public key for pasting in to OpenSSH authorized keys file の文字列をそのままコピー&ペーストします。
 
-保存して完了です。
+形式は`ssh-rsa [KEY_VALUE] [USERNAME]`です。
+
+保存して完了。
 
 ## puttyで秘密鍵を使って接続する
 
