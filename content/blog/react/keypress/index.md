@@ -1,6 +1,7 @@
 ---
 title: ReactでonKeyPressを取得する
 date: "2019-09-24T12:00:00.000Z"
+update: "2019-12-28T10:00:00.000Z"
 tags: ['react', 'onkeypress']
 ---
 
@@ -31,10 +32,10 @@ const Component = ({text, changeText, sendText}) => {
 
 ## div で onKeyPress を取得する
 
-上記`input`のような場合は通常フォーカスされた状態で使用するのでOKですが、そうではない場合は注意が必要です。
+上記`input`のような場合は通常フォーカスされた状態で使用するので入力受付時も問題ないですが、そうではない場合は注意が必要です。
 
-キーボードによる画面制御やメディアの再生、停止をキーボードでも操作できるようにするには親要素(`div`など)でイベントを拾わなければなりません。
-この場合は、`tabIndex`を指定してフォーカスします。
+画面制御やメディアの再生、停止をキーボードでも操作できるようにするには親要素(`div`など)でイベントを拾わなければなりません。
+この場合は、`tabIndex`を指定してマウントされたときにフォーカスするようにします。
 
 ```javascript:title=<span>React</span>
 const Component = ({mediaControl}) => {
@@ -56,7 +57,7 @@ const Component = ({mediaControl}) => {
 上記例では、スペースキーでメディアの再生を停止します。
 しかし、`AppComponent`内に`input`や`textarea`がある場合、イベントはバブリングするので文字列入力時のスペース入力も拾ってしまいます。
 
-フォーム要素での入力に`event.stopPropagation()`メソッドを使うか、以下のように`div`でイベントを拾ったときに除外します。
+この場合は、フォーム要素での入力に`event.stopPropagation()`メソッドを使うか、以下のように`div`でイベントを拾ったときに除外します。
 
 ```javascript:title=<span>React</span>
 const keyPress = (e) => {
